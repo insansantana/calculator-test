@@ -109,7 +109,8 @@ function App() {
         <input
           type="text"
           name="field3"
-          onChange={(event) => handleInputChange(event)}
+          value={values.field3}
+          onChange={handleInputChange}
         />
         <input
           type="checkbox"
