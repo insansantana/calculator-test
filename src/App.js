@@ -15,12 +15,14 @@ function App() {
   const [result, setResult] = useState(0);
 
   const handleInputChange = (event) => {
+    const re = /^[0-9\b]+$/;
     const { name, value } = event.target;
-
-    setValues({
-      ...values,
-      [name]: value,
-    });
+    if (value === "" || re.test(value)) {
+      setValues({
+        ...values,
+        [name]: value,
+      });
+    }
   };
 
   const handleCheckboxChange = (event) => {
